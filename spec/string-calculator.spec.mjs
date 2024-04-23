@@ -25,6 +25,11 @@ describe('StringCalculator', () => {
         const stringCalculator = new StringCalculator();
         const result = stringCalculator.add('1', '1', '2', '2')
         expect(result).toBe(6)
+    });
+    it('should add up n numbers', () => {
+        const stringCalculator = new StringCalculator();
+        const result = stringCalculator.add('1', '1', '2', '2', '3', '3')
+        expect(result).toBe(12)
     })
 
 })

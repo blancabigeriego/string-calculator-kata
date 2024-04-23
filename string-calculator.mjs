@@ -1,9 +1,13 @@
 export class StringCalculator {
-    add(string1, string2 = '0', string3 = '0', string4 = 0){
-        if(string1 === '')
-        return 0;
-        if(string1 !== null ) 
-        return parseInt(string1) + parseInt(string2) + parseInt(string3) + parseInt(string4)
+    add(...strings){
+        if (strings.length === 0) return 0;
         
+        let sum = 0;
+        for (let string of strings) {
+            let parsedNumber = parseInt(string);
+            sum += parsedNumber;
+        }
+        
+        return sum;
     }
 }
