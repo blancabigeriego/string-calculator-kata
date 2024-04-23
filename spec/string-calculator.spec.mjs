@@ -30,6 +30,11 @@ describe('StringCalculator', () => {
         const stringCalculator = new StringCalculator();
         const result = stringCalculator.add('1', '1', '2', '2', '3', '3')
         expect(result).toBe(12)
+    });
+    it('should allow to separate numbers with chart returns', () => {
+        const stringCalculator = new StringCalculator();
+        const result = stringCalculator.add('1\n2','3')
+        expect(result).toBe(6)
     })
 
 })
